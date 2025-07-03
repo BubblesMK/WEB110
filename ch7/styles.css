@@ -1,0 +1,134 @@
+
+/*resets the browser with margins and padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*centers the content, sets max width, and adds padding/shadow*/
+.wrapper {
+    width: 95%;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #0000001a;
+}
+
+/*styles the top section with a red background, white text, and large font*/
+header {
+    background: #d92323;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+/*sets the overall background color. removes margin/padding and applies a font*/
+body {
+    background: #d92323;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+/*adds yellow background and centers navigation links*/
+nav {
+    background: #ffcc00;
+    padding: 10px;
+    text-align: center;
+}
+
+/*makes text stack naturally on smaller screens*/
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/*colors nav once the page is visted */
+nav a :visited {
+    text-decoration: underline;
+    color: #e00808;/*red*/
+}
+/*colors the nav when the mouse hovered on text*/
+nav a :hover{
+    background-color: #fff;
+    color: #3a3232;
+    border: 2px solid #725e5e;
+}
+
+/*floats left (50% width). styles the sidebar*/
+section {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/*clears the floats and returns the page to normal flow*/
+
+main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*makes images responsive to their containers*/
+img {
+    height: 50%;
+    max-width: 70%;
+    opacity: .7;
+    object-fit: cover;
+}
+
+/*makes images responsive and change the images on hover*/
+img:hover {
+    border: 1px solid #ddc10f;
+    opacity: 1;
+    border-radius: 10px;
+    transform: scale(1.2);
+    transition: transform 0.5s ease-in-out;
+    /*smooth scaling effect*/
+}
+
+/*clears floats, applies a red background, and centers the white text*/
+footer {
+    clear: both; /*fix floats issues*/
+}
+
+/*Mobile Styles: 768px and smaller */
+@media (max-width: 768px) {
+    section {
+        width: 100%;
+        float: none;
+        padding: 10px 0;
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 1.2em;
+        padding: 15px;
+    }
+
+    nav {
+        padding: 8px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        font-size: 1em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
