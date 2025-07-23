@@ -1,0 +1,178 @@
+/*Mandisa Harris 07/22/2025*/
+
+
+/*Resets spacing and makes sizing more predictable. Affects everything on the page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper { /*will center all webpages*/
+			margin-left: auto;
+            margin-right: auto;
+            width: 80%; /*allows for flexibility within the screen*/
+            min-width: 320px; /*screen will not shrink below 320px which is good for smaller screens*/
+            max-width: 1200px; /*prevents screen from stretching*/
+            background-color: #f8f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #100c18; 
+        }
+
+/*creates two columns on each page using a the specified classes below*/
+.columns {
+  display: flex;
+  gap: 2em; /* spacing between columns */
+}
+
+.column {
+  flex: 1; /* each column takes up equal space */
+  padding: 1em;
+  background-color: #8cbb7757;
+}
+
+.box { /*created a class for all of the p elements so that it gives more of a box look*/
+    padding: 10px;
+    margin: 15px;
+    line-height: 2em;
+}
+
+/*css for all images included in this website.*/
+img {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img2 {
+    border-radius: 50%;
+}
+
+h2, h3 { /*adds a purple background to all h3s and padding*/
+    background-color: #775aad;
+    border-radius: 10px;
+    text-align: center;
+    padding: 5px;
+    font-style: italic;
+
+}
+
+/*css for the internal link -- CTA*/
+.cta {
+    background-color: #d3cda7;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    border: 10px ridge #775aad;
+    border-radius: 60em;
+}
+
+.cta a {
+    color: black;
+}
+/*end of css for the internal link -- CTA*/
+
+/*css end of the css for img*/
+
+body {
+    background-color: #775aad;
+}
+
+header {
+    background-color:#d3cda7;
+    text-align: center;
+    padding: 20px;
+    font-size: 3vh;
+}
+
+footer { /*changes the background of the footer*/
+    background-color: #d3cda7;
+    padding: 15px;
+    text-align: center;
+}
+
+footer a { /*changes the font color of my social links to purple*/
+    color: #775aad;
+}
+
+main {
+    padding: 2em;
+}
+
+ul {
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+/*created a css for the ordered and unordered list on the second and third page to draw attention to the example websites*/
+.external { 
+    background-color:#d3cda7;
+    margin-bottom: 10px;
+    border-radius: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.external a {
+    color: black;
+    text-decoration: underline;
+}
+
+.external ul {
+    list-style-type: square;
+}
+/*end of unordered list css*/
+
+.list {
+    padding: 50px;
+    background-color: #d3cda7;
+    border-radius: 0 50% 50% 0;
+}
+
+
+/*nav css begins here*/
+nav ul { 
+    display: flex; /*automatically adjust the nav links to be horizontal. no need to specify the flex direction*/
+    flex-wrap: wrap; /*when the screen becomes smaller the nav links will wrap*/
+    gap: 10%; /*adds a gap between each of the links*/
+    justify-content: center;
+    background-color: #8cbb77;
+    padding: 10px;
+    list-style-type: none; /*removes the bulletin point from the link*/
+}
+
+nav a {
+    text-decoration: none; /*removes the underline from the link*/
+    color: black;
+    display: block;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #775aad;
+}
+
+
+/*nav css edits end here*/
+
+@media (max-width: 800px) { /*when the screen is 800px or less the navigation will turn into a column*/
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a { /*centers the navigation links, adds a white top and bottom border*/
+        text-align: center;
+        padding: 5px;
+        border-bottom: 1px solid white;
+        border-top: 1px solid white;
+    }
+
+    nav a:hover { /*when the screen is 800px or smaller. a grey box will appear*/
+        background-color: grey;
+    }
+
+    /*moves the second column under the first column to make for a better experience on smaller screens*/
+    .columns {
+        flex-direction: column;
+    }
+}
+

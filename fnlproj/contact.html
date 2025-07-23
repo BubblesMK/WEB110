@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--Mandisa Harris 07/22/2025-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>The Importance of User Experience</title>
+    <!--Icon library-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        #img4 { /*gives the image and oval look*/
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .column2 { /*this css style is specifically for the contact page*/
+            flex: 1; /* each column takes up equal space */
+            padding: 1em;
+        }
+
+        .form {
+            background-color: #775aad93;
+            padding: 10px;
+            margin: 10px;
+            height: 10%;
+            font-size: small;
+        }
+
+        .form p {
+            padding-bottom: 10px;
+        }
+
+        textarea { /*moves the textbox under the label Comments*/
+            display: block;
+        }
+
+        .credits {
+            background-color:#8cbb7757 ;
+        }
+    </style>
+</head>
+
+<body>
+<div id="wrapper"> <!--the wrapper ID is here to center the entire page-->
+    <header>
+        <h1>Reach Out!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="principles.html">UX Principles</a></li>
+            <li><a href="benefits.html">Benefits of UX Design</a></li>
+            <li><a href="contact.html">Let&apos;s Connect!</a></li>
+            <li><a href="credits.html">Credits</a></li>
+        </ul>
+    </nav>
+    
+    <!--Beginning of contact form. This is to allow for ones to reach out to me regarding their feedback-->
+    <div class="columns">
+    
+
+    <div class="column2"> <!--the div element is being used because there is no heading element being utilized-->
+    <img id="img4" src="images/feedback.jpg" alt="an illustration with FEEDBACK in bold letters">
+    <p class="box">Did you find the information from this website informative? Do you feel it thoroughly covered the topic of UX design? I would love to hear from you and get your thoughts and even collaborate!</p>
+    <p class="box">Feel free to fill out your contact information and I will be in touch!</p>
+    </div>
+
+
+    <div class="form"> <!--the form class is so that the form information can be clearly identified-->
+    <section class="column2">
+    <h4>Required information is marked with an asterisk*</h4><br>
+    <form method="post" action="https://webdevbasics.net/scripts/demo.php">
+    
+    <label for="todaysdate">*Today&apos;s Date</label>
+    <input type="date" name="todaysdate" id="todaysdate"><br><br>
+
+    <label for="myFirstName">* First Name</label>
+    <input type="text" name="myFirstName" id="myFirstName" required
+        placeholder="your first name"><br><br>
+
+    <label for="myLastName">* Last Name</label>
+    <input type="text" name="myLastName" id="myLastName" required placeholder="your last name"><br><br>
+
+    <label for="myEmail">* Email Address</label>
+    <input type="text" id="myEmail" required placeholder="your email"><br><br>
+    
+    <section> <!--checkbox-->
+    <h4>*Choose what best describes your knowledge in UX design:</h4>
+    <input type="checkbox" name="Beginner" id="Beginner"
+    value="yes"> Beginner<br>
+
+    <input type="checkbox" name="Intermediate" id="Intermediate"
+    value="yes"> Intermediate<br>
+
+    <input type="checkbox" name="Expert" id="Expert"
+    value="yes"> Expert<br><br>
+    </section>
+
+    <section> <!--select an option-->
+    <h4>*What was the purpose of your visit?</h4>
+    <select size="1" name="jumpmenu" id="jumpmenu">
+        <option value="Business">Business</option>
+        <option value="Education/Research">Education/Research</option>
+        <option value="Leisure">Leisure</option>
+    </select><br><br>
+    </section>
+
+    <section><!--radio button option-->
+    <h4>*What age best describes you?</h4>
+    <input type="radio" name="age" id="ageAA" value="AA"> Under 18 <br>
+    <input type="radio" name="age" id="ageBB" value="BB"> 18 - 24 <br>
+    <input type="radio" name="age" id="ageCC" value="CC"> 25 - 34 <br>
+    <input type="radio" name="age" id="ageDD" value="DD"> 34 - 44 <br>
+    <input type="radio" name="age" id="ageEE" value="EE"> 45 - 54 <br>
+    <input type="radio" name="age" id="ageFF" value="FF"> 55 - 64 <br>
+    <input type="radio" name="age" id="ageGG" value="GG"> 65 and up <br>
+    </section>
+    <br>
+    <label for="myComments"><strong>* Comments</strong></label>
+    <textarea name="myComments" id="myComments" rows="4"
+        cols="30" required placeholder="your comments here"></textarea><br><br>
+
+    <input type="submit" value= "Submit"> <input type="reset" value="Clear"><br><br>
+    </form>
+    </section>
+    </div>
+
+    </div>
+    <footer>
+        &copy; 2025 Mandisa Harris | Email: <a href="mailto:mharrisk@stumail.jccc.edu">mharrisk@stumail.jccc.edu</a>
+            <a class="icons" href="https://www.linkedin.com/in/mandisa-harris-540935119"><i class="fa fa-linkedin"></i></a>
+            <a class="icons" href="https://github.com/BubblesMK/WEB110"><i class="fa fa-github"></i></a>
+            <a class="icons" href="https://www.instagram.com/mandiharris72/"><i class="fa fa-instagram"></i></a>
+            <a class="icons" href="mailto:mandisa.harris17@gmail.com"><i class="fa fa-envelope"></i></a>
+    </footer>
+</div> <!--closed div using the wrapper-->
+</body>
+</html>
